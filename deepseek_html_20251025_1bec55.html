@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Resources Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            padding: 120px 2rem 60px;
+            text-align: center;
+            background: linear-gradient(45deg, #0f3460, #1a1a2e);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .features {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #00ff88;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00ff88;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .downloads {
+            padding: 80px 2rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .downloads-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .download-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .download-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .download-title {
+            font-size: 1.5rem;
+            color: #00ff88;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            color: #000;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #00ff88; }
+            50% { box-shadow: 0 0 20px #00ff88; }
+            100% { box-shadow: 0 0 5px #00ff88; }
+        }
+
+        .glowing {
+            animation: glow 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">GameResources</a>
+            <div class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#features">Возможности</a>
+                <a href="#downloads">Ресурсы</a>
+                <a href="#support">Поддержка</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Game Resources Hub</h1>
+        <p>Легальные ресурсы, моды и инструменты для ваших игр</p>
+        <button class="download-btn glowing">Начать использование</button>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Наши возможности</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Оптимизация</h3>
+                <p>Улучшите производительность игры с нашими легальными патчами</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Визуалы</h3>
+                <p>Красивые шейдеры и текстуры для улучшения графики</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>Инструменты</h3>
+                <p>Полезные утилиты для разработки и моддинга</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="downloads" id="downloads">
+        <div class="downloads-container">
+            <h2 class="section-title">Легальные ресурсы</h2>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <h3 class="download-title">Оптимизационный патч</h3>
+                    <button class="download-btn">Скачать</button>
+                </div>
+                <p>Улучшает производительность игры без нарушения правил</p>
+            </div>
+
+            <div class="download-card">
+                <div class="download-header">
+                    <h3 class="download-title">Пакет текстур HD</h3>
+                    <button class="download-btn">Скачать</button>
+                </div>
+                <p>Высококачественные текстуры для улучшения визуала</p>
+            </div>
+
+            <div class="download-card">
+                <div class="download-header">
+                    <h3 class="download-title">Легальный лаунчер</h3>
+                    <button class="download-btn">Скачать</button>
+                </div>
+                <p>Удобный лаунчер для управления модами</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Game Resources Hub. Все права защищены.</p>
+        <p>Все ресурсы предоставляются в образовательных целях.</p>
+    </footer>
+
+    <script>
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Анимация появления элементов
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.feature-card, .download-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
